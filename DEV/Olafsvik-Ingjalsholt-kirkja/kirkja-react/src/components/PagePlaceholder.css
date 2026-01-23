@@ -1,0 +1,61 @@
+/* Page placeholder styles */
+.page-placeholder {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.page-hero h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 600px;
+}
+
+.placeholder-box h3 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.placeholder-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-placeholder {
+    padding: 1rem;
+  }
+  
+  .page-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .placeholder-box {
+    padding: 2rem;
+  }
+}

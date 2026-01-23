@@ -1,0 +1,152 @@
+/* Church detail page styles */
+.church-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.church-hero {
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.church-hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.church-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.church-hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.church-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.info, .pastor, .ministries, .history {
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info h2, .pastor h2, .ministries h2, .history h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.info p, .pastor p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.ministries ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ministries li {
+  background: #f8f9fa;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-left: 4px solid #3498db;
+  border-radius: 0 5px 5px 0;
+}
+
+.history p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.board-members {
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.board-members h2 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.board-member {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #3498db;
+}
+
+.board-member h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.member-info .position {
+  color: #3498db;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.member-info .email {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+  .church-detail {
+    padding: 1rem;
+  }
+  
+  .church-hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .info, .pastor, .ministries, .history, .board-members {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .board-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
