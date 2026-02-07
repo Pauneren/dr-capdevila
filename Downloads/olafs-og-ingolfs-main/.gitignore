@@ -1,0 +1,18 @@
+node_modules
+
+.astro
+.env
+.env.local
+.env.production
+
+# Historical resources temp workspace (do not commit)
+resources/historical/_work/
+
+# macOS
+.DS_Store
+._*
+__MACOSX/
+
+# Sanity
+sanity/.sanity/
+sanity/node_modules/
