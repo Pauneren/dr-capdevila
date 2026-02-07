@@ -158,6 +158,43 @@ export async function getNextService(): Promise<{
   }
 }
 
+export async function getAnnouncements(limit?: number): Promise<Array<{
+  _id: string;
+  title: string;
+  date: string;
+  body: string;
+  link?: string;
+  pinned?: boolean;
+}> | null> {
+  try {
+    const limitClause = limit ? `[0...${limit}]` : '';
+    const result = await sanity.fetch<Array<{
+      _id: string;
+      title: string;
+      date: string;
+      body: string;
+      link?: string;
+      pinned?: boolean;
+    }>>(`
+      *[_type == "announcement"] | order(pinned desc, date desc) ${limitClause} {
+        _id,
+        title,
+        date,
+        body,
+        link,
+        pinned
+      }
+    `)
+    return result ?? null
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('401')) {
+      console.error('Sanity authentication failed. Please check your SANITY_READ_TOKEN environment variable.')
+      console.error('To create a Viewer token, see: docs/HANDOFF.md')
+    }
+    throw error
+  }
+}
+
 export async function getSiteSettings(): Promise<{
   publicName?: string;
   canonicalName?: string;
