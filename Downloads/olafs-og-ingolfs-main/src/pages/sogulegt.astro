@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro'
+import {getSiteSettings} from '../lib/sanity'
+
+const siteSettings = await getSiteSettings()
+const title = siteSettings?.canonicalName || siteSettings?.publicName ?? 'Ólafsvík & Ingjaldshóll'
+---
+
+<Layout title={`${title} - Sögulegt efni`}>
+  <main class="min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Sögulegt efni</h1>
+        <p class="text-xl text-gray-600">Sögu og menningarsvæði kirkjanna</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-8">
+          <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Söguágrip</h2>
+            <div class="prose prose-gray max-w-none">
+              <p class="text-gray-700 mb-4">
+                Kirkjustarfi á Íslandi á langa og ríka sögu sem spannar yfir þúsundir ára. 
+                Ólafsvíkurkirkja og Ingjaldshóltskirkja eru mikilvægir sögustaðir sem hafa gegnt 
+                lykilhlutverki í trúar- og menningarlífi svæðisins.
+              </p>
+              <p class="text-gray-700 mb-4">
+                Fyrstu kirkjur á svæðinu voru byggðar snemma á landnámsöld og hafa síðan verið 
+                endurbyggðar og viðhaldið af ýmsum kynslóðum. Kirkjurnar standa sem vitnisburður 
+                um trúarlíf og samfélag þjóðarinnar gegnum aldirnar.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Arkitektúr og byggingarlist</h2>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Ólafsvíkurkirkja</h3>
+                <p class="text-gray-700">
+                  Byggingin sýnir einkennandi íslenska kirkjubyggingarlist með einföldum en 
+                  fallegum hönnunarþáttum. Kirkjan hefur verið viðhaldið með umhyggju til að varðveita 
+                  sögulegt gildi hennar.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Ingjaldshóltskirkja</h3>
+                <p class="text-gray-700">
+                  Arkitektúr kirkjunnar blandaðist nýjum og gömlum stílum og sýnir þróun 
+                  kirkjubyggingarlistar á Íslandi. Staðsetning hennar á hæðinni gefur frábært yfirsýn.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Menningarsvæði</h2>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Kirkjusöfn</h3>
+                  <p class="text-gray-700">Söfn kirkjanna innihalda ýmis konar sögulega gripi, listaverk og trúargripi.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Söguskrár</h3>
+                  <p class="text-gray-700">Vel varðveittar kirkjuskrár sem sýna sögu kirkjanna og samfélagsins.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Listaverk og gripir</h3>
+                  <p class="text-gray-700">Margskonar listaverk og sögulegir gripir sem segja sögu trúarlífsins.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Rannsóknir og nám</h3>
+            <p class="text-blue-800">
+              Kirkjurnar eru mikilvæg rannsóknarsvæði fyrir sagnfræði, byggingarlist og trúarfræði. 
+              Hægt er að fá aðgang að sögulegu efni í samráði við sóknarprest og kirkjuráð.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

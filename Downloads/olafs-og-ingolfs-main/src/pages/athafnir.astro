@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro'
+import {getSiteSettings} from '../lib/sanity'
+
+const siteSettings = await getSiteSettings()
+const title = siteSettings?.canonicalName || siteSettings?.publicName ?? 'Ólafsvík & Ingjaldshóll'
+---
+
+<Layout title={`${title} - Athafnir`}>
+  <main class="min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Athafnir</h1>
+        <p class="text-xl text-gray-600">Sögu og starfsemi kirkjanna</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <div class="prose prose-gray max-w-none">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Ólafsvíkurkirkja</h2>
+            <p class="text-gray-700 mb-6">
+              Ólafsvíkurkirkja er ein af elstu kirkjum á Íslandi. Byggingin stendur á Ólafsvík og hefur verið miðstöð 
+              trúarlífs í sveitinni um aldir. Kirkjan hefur gegnt mikilvægu hlutverki í samfélaginu og er 
+              mikilvægur menningararflokkur svæðisins.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Ingjaldshóltskirkja</h2>
+            <p class="text-gray-700 mb-6">
+              Ingjaldshóltskirkja er einnig söguleg kirkja sem hefur verið miðpunktur guðstjónustu í nærumhverfinu. 
+              Kirkjan er þekkt fyrir fallega arkitektúr og rólega umhverfi sem hentar vel til andlegs dygðar.
+            </p>
+
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8">
+              <h3 class="text-lg font-semibold text-blue-900 mb-2">Opnunartímar</h3>
+              <p class="text-blue-800">
+                Kirkjurnar eru opnar fyrir gesti á sumrin og aðrar sérstakar tækifæri. 
+                Vinsamlegast hafið samband við sóknarprest fyrir nánari upplýsingar um opnunartíma.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
