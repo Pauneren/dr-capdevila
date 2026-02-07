@@ -1,0 +1,225 @@
+{
+  "files": [
+    {
+      "filename": "spec.md",
+      "relativePath": "main/spec.md",
+      "type": ".md",
+      "summary": "Church homepage requirements and implementation spec covering geography, operational realities, and content structure for both Ólafsvíkurkirkja and Ingjaldshólskirkja.",
+      "suggestedDestination": "sanity:page"
+    },
+    {
+      "filename": "history_design.md",
+      "relativePath": "historical/history_design.md",
+      "type": ".md",
+      "summary": "Historical archive design specification defining purpose, principles, access patterns, and navigation for the parish history archive with preserve-first approach.",
+      "suggestedDestination": "sanity:page"
+    },
+    {
+      "filename": "Brimilsvellir.zip",
+      "relativePath": "historical/sources_zips/Brimilsvellir.zip",
+      "type": ".zip",
+      "summary": "Historical documents and images related to Brimilsvellir church, likely containing HTML pages and assets from the old website.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "BrimilsvellirOrgel.zip",
+      "relativePath": "historical/sources_zips/BrimilsvellirOrgel.zip",
+      "type": ".zip",
+      "summary": "Content about the pipe organ at Brimilsvellir church, including historical information and possibly images.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "Ingjalds100.zip",
+      "relativePath": "historical/sources_zips/Ingjalds100.zip",
+      "type": ".zip",
+      "summary": "Commemoration of 100 years anniversary of Ingjaldshólskirkja with celebration ceremony details and historical photos.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "Ingjalds75Ara.zip",
+      "relativePath": "historical/sources_zips/Ingjalds75Ara.zip",
+      "type": ".zip",
+      "summary": "75th anniversary celebration content for Ingjaldshólskirkja, likely containing ceremony information.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsBaenasteinn.zip",
+      "relativePath": "historical/sources_zips/IngjaldsBaenasteinn.zip",
+      "type": ".zip",
+      "summary": "Information about the prayer stone (baenasteinn) at Ingjaldshóll, possibly with historical significance.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsFrettKirkjugardur.zip",
+      "relativePath": "historical/sources_zips/IngjaldsFrettKirkjugardur.zip",
+      "type": ".zip",
+      "summary": "News and updates about the churchyard at Ingjaldshóll, including burial ground information.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsHelgiskrudi.zip",
+      "relativePath": "historical/sources_zips/IngjaldsHelgiskrudi.zip",
+      "type": ".zip",
+      "summary": "Content about holy relics or sacred objects associated with Ingjaldshólskirkja.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsMinningUmKristinn.zip",
+      "relativePath": "historical/sources_zips/IngjaldsMinningUmKristinn.zip",
+      "type": ".zip",
+      "summary": "Memorial content remembering Kristinn, likely a significant figure in the church community.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsMinningarreitur.zip",
+      "relativePath": "historical/sources_zips/IngjaldsMinningarreitur.zip",
+      "type": ".zip",
+      "summary": "Information about the memorial section or remembrance area at Ingjaldshólskirkja.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsMunir.zip",
+      "relativePath": "historical/sources_zips/IngjaldsMunir.zip",
+      "type": ".zip",
+      "summary": "Historical artifacts and relics (munir) from Ingjaldshólskirkja, including church treasures and historical items.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsOrgel.zip",
+      "relativePath": "historical/sources_zips/IngjaldsOrgel.zip",
+      "type": ".zip",
+      "summary": "Detailed information about the pipe organ at Ingjaldshólskirkja, including history and technical details.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "IngjaldsSafnadarheimili.zip",
+      "relativePath": "historical/sources_zips/IngjaldsSafnadarheimili.zip",
+      "type": ".zip",
+      "summary": "Content about the parish house/community center at Ingjaldshóll and its historical significance.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "KirkjurOgBaenhus.zip",
+      "relativePath": "historical/sources_zips/KirkjurOgBaenhus.zip",
+      "type": ".zip",
+      "summary": "General information about churches and prayer houses in the area, possibly including historical context.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OlafsGjaldskra.zip",
+      "relativePath": "historical/sources_zips/OlafsGjaldskra.zip",
+      "type": ".zip",
+      "summary": "Financial records or fee schedule (gjaldskrá) for Ólafsvíkurkirkja, possibly with historical pricing information.",
+      "suggestedDestination": "discard/unclear"
+    },
+    {
+      "filename": "Olafsvik50Ara.zip",
+      "relativePath": "historical/sources_zips/Olafsvik50Ara.zip",
+      "type": ".zip",
+      "summary": "50th anniversary celebration content for Ólafsvíkurkirkja with ceremony details and commemorative information.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OlafsvikKirkjanASnoppunni.zip",
+      "relativePath": "historical/sources_zips/OlafsvikKirkjanASnoppunni.zip",
+      "type": ".zip",
+      "summary": "Content about Ólafsvíkurkirkja at a celebration or special event, possibly with historical photos.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OlafsvikMunir.zip",
+      "relativePath": "historical/sources_zips/OlafsvikMunir.zip",
+      "type": ".zip",
+      "summary": "Historical artifacts and relics (munir) from Ólafsvíkurkirkja, including church treasures and historical items.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OlafsvikOrgel.zip",
+      "relativePath": "historical/sources_zips/OlafsvikOrgel.zip",
+      "type": ".zip",
+      "summary": "Detailed information about the pipe organ at Ólafsvíkurkirkja, including history and technical specifications.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OlafsvikSafnadarheimili.zip",
+      "relativePath": "historical/sources_zips/OlafsvikSafnadarheimili.zip",
+      "type": ".zip",
+      "summary": "Content about the parish house/community center at Ólafsvík and its role in church community life.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OlafsvikSkipskadaFrasogn.zip",
+      "relativePath": "historical/sources_zips/OlafsvikSkipskadaFrasogn.zip",
+      "type": ".zip",
+      "summary": "Account or narrative about ship damage (skipskaða) in Ólafsvík, possibly with church community response.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "Olafsvikurkirkja.zip",
+      "relativePath": "historical/sources_zips/Olafsvikurkirkja.zip",
+      "type": ".zip",
+      "summary": "General historical content about Ólafsvíkurkirkja, including building history and significant events.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "OldBoadsOlafsvik.zip",
+      "relativePath": "historical/sources_zips/OldBoadsOlafsvik.zip",
+      "type": ".zip",
+      "summary": "Historical records about old boats or shipping in Ólafsvík, possibly relating to maritime church history.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "PrestarIngjaldshols.zip",
+      "relativePath": "historical/sources_zips/PrestarIngjaldshols.zip",
+      "type": ".zip",
+      "summary": "Information about pastors who have served at Ingjaldshólskirkja throughout history.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "PrestarNesthinga.zip",
+      "relativePath": "historical/sources_zips/PrestarNesthinga.zip",
+      "type": ".zip",
+      "summary": "Records of pastors in the Nesþing area, covering multiple churches and their clergy history.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "PrestarOlafsvikur.zip",
+      "relativePath": "historical/sources_zips/PrestarOlafsvikur.zip",
+      "type": ".zip",
+      "summary": "Comprehensive information about pastors who have served at Ólafsvíkurkirkja throughout its history.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "PrestarOlafsvikurOgIngjalshols.zip",
+      "relativePath": "historical/sources_zips/PrestarOlafsvikurOgIngjalshols.zip",
+      "type": ".zip",
+      "summary": "Combined records of pastors serving both Ólafsvíkurkirkja and Ingjaldshólskirkja, showing shared ministry.",
+      "suggestedDestination": "sanity:historical-article"
+    },
+    {
+      "filename": "SafnadarHeimiliIngjaldsSaga.zip",
+      "relativePath": "historical/sources_zips/SafnadarHeimiliIngjaldsSaga.zip",
+      "type": ".zip",
+      "summary": "Historical narrative about the Ingjaldshóll parish house and its role in community life over time.",
+      "suggestedDestination": "sanity:historical-article"
+    }
+  ],
+  "summary": {
+    "totalFiles": 28,
+    "byType": {
+      ".md": 2,
+      ".zip": 26
+    },
+    "byDestination": {
+      "sanity:page": 2,
+      "sanity:historical-article": 25,
+      "discard/unclear": 1
+    },
+    "byChurch": {
+      "Ingjaldshóll": 11,
+      "Ólafsvík": 9,
+      "Both/General": 6,
+      "Other": 2
+    }
+  }
+}
