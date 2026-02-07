@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro'
+import {getSiteSettings, getUpcomingServices, getPastServices} from '../lib/sanity'
+
+const siteSettings = await getSiteSettings()
+const title = siteSettings?.canonicalName || siteSettings?.publicName ?? 'Ólafsvík & Ingjaldshóll'
+
+const urlParams = Astro.url.searchParams
+const locationFilter = urlParams.get('location') || undefined
+
+const upcomingServices = await getUpcomingServices(locationFilter)
+const pastServices = await getPastServices(locationFilter)
+
+function formatDate(dateString: string) {
+  const date = new Date(dateString)
+  return date.toLocaleString('is-IS', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  })
+}
+---
+
+<Layout title={`${title} - Guðsthjónustur`}>
+  <main class="min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Guðsthjónustur</h1>
+        <p class="text-xl text-gray-600">Sóknarguðstjónustur í Ólafsvík og Ingjaldshóli</p>
+      </div>
+
+      <!-- Location Filter -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex rounded-lg border border-gray-200 bg-white p-1">
+          <a 
+            href="/gudsthjonustur" 
+            class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              !locationFilter 
+                ? 'bg-blue-600 text-white' 
+                : 'text-gray-700 hover:text-gray-900'
+            }`}
+          >
+            Allir staðir
+          </a>
+          <a 
+            href="/gudsthjonustur?location=Ólafsvík" 
+            class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              locationFilter === 'Ólafsvík' 
+                ? 'bg-blue-600 text-white' 
+                : 'text-gray-700 hover:text-gray-900'
+            }`}
+          >
+            Ólafsvík
+          </a>
+          <a 
+            href="/gudsthjonustur?location=Ingjaldshóll" 
+            class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              locationFilter === 'Ingjaldshóll' 
+                ? 'bg-blue-600 text-white' 
+                : 'text-gray-700 hover:text-gray-900'
+            }`}
+          >
+            Ingjaldshóll
+          </a>
+        </div>
+      </div>
+
+      <!-- Upcoming Services -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Komandi guðsthjónustur</h2>
+        {upcomingServices && upcomingServices.length > 0 ? (
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {upcomingServices.map((service) => (
+              <div class={`bg-white rounded-lg shadow-md p-6 border-l-4 ${
+                service.isCanceled ? 'border-red-500 opacity-75' : 'border-blue-500'
+              }`}>
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900">{service.title}</h3>
+                  {service.isCanceled && (
+                    <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                      Afpöntuð
+                    </span>
+                  )}
+                </div>
+                <p class="text-sm text-gray-600 mb-2">
+                  <strong>Tími:</strong> {formatDate(service.startDateTime)}
+                </p>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>Staðsetning:</strong> {service.location}
+                </p>
+                {service.description && (
+                  <p class="text-gray-700 text-sm">{service.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="bg-white rounded-lg shadow-md p-8 text-center">
+            <p class="text-gray-500">Engar komandi guðsthjónustur fundnar</p>
+          </div>
+        )}
+      </section>
+
+      <!-- Past Services -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Liðnar guðsthjónustur</h2>
+        {pastServices && pastServices.length > 0 ? (
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {pastServices.map((service) => (
+              <div class={`bg-white rounded-lg shadow-md p-6 border-l-4 ${
+                service.isCanceled ? 'border-red-500 opacity-75' : 'border-gray-300'
+              }`}>
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900">{service.title}</h3>
+                  {service.isCanceled && (
+                    <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                      Afpöntuð
+                    </span>
+                  )}
+                </div>
+                <p class="text-sm text-gray-600 mb-2">
+                  <strong>Tími:</strong> {formatDate(service.startDateTime)}
+                </p>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>Staðsetning:</strong> {service.location}
+                </p>
+                {service.description && (
+                  <p class="text-gray-700 text-sm">{service.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="bg-white rounded-lg shadow-md p-8 text-center">
+            <p class="text-gray-500">Engar liðnar guðsthjónustur fundnar</p>
+          </div>
+        )}
+      </section>
+    </div>
+  </main>
+</Layout>

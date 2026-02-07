@@ -8,6 +8,156 @@ const sanity = createClient({
   token: import.meta.env.SANITY_READ_TOKEN,
 })
 
+export async function getServices(location?: string): Promise<Array<{
+  _id: string;
+  title: string;
+  startDateTime: string;
+  location: string;
+  description?: string;
+  isCanceled?: boolean;
+}> | null> {
+  try {
+    const locationFilter = location ? `&& location == "${location}"` : '';
+    const result = await sanity.fetch<Array<{
+      _id: string;
+      title: string;
+      startDateTime: string;
+      location: string;
+      description?: string;
+      isCanceled?: boolean;
+    }>>(`
+      *[_type == "service" ${locationFilter}] | order(startDateTime asc) {
+        _id,
+        title,
+        startDateTime,
+        location,
+        description,
+        isCanceled
+      }
+    `)
+    return result ?? null
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('401')) {
+      console.error('Sanity authentication failed. Please check your SANITY_READ_TOKEN environment variable.')
+      console.error('To create a Viewer token, see: docs/HANDOFF.md')
+    }
+    throw error
+  }
+}
+
+export async function getUpcomingServices(location?: string): Promise<Array<{
+  _id: string;
+  title: string;
+  startDateTime: string;
+  location: string;
+  description?: string;
+  isCanceled?: boolean;
+}> | null> {
+  try {
+    const locationFilter = location ? `&& location == "${location}"` : '';
+    const now = new Date().toISOString();
+    const result = await sanity.fetch<Array<{
+      _id: string;
+      title: string;
+      startDateTime: string;
+      location: string;
+      description?: string;
+      isCanceled?: boolean;
+    }>>(`
+      *[_type == "service" && startDateTime >= "${now}" ${locationFilter}] | order(startDateTime asc) {
+        _id,
+        title,
+        startDateTime,
+        location,
+        description,
+        isCanceled
+      }
+    `)
+    return result ?? null
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('401')) {
+      console.error('Sanity authentication failed. Please check your SANITY_READ_TOKEN environment variable.')
+      console.error('To create a Viewer token, see: docs/HANDOFF.md')
+    }
+    throw error
+  }
+}
+
+export async function getPastServices(location?: string): Promise<Array<{
+  _id: string;
+  title: string;
+  startDateTime: string;
+  location: string;
+  description?: string;
+  isCanceled?: boolean;
+}> | null> {
+  try {
+    const locationFilter = location ? `&& location == "${location}"` : '';
+    const now = new Date().toISOString();
+    const result = await sanity.fetch<Array<{
+      _id: string;
+      title: string;
+      startDateTime: string;
+      location: string;
+      description?: string;
+      isCanceled?: boolean;
+    }>>(`
+      *[_type == "service" && startDateTime < "${now}" ${locationFilter}] | order(startDateTime desc) {
+        _id,
+        title,
+        startDateTime,
+        location,
+        description,
+        isCanceled
+      }
+    `)
+    return result ?? null
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('401')) {
+      console.error('Sanity authentication failed. Please check your SANITY_READ_TOKEN environment variable.')
+      console.error('To create a Viewer token, see: docs/HANDOFF.md')
+    }
+    throw error
+  }
+}
+
+export async function getNextService(): Promise<{
+  _id: string;
+  title: string;
+  startDateTime: string;
+  location: string;
+  description?: string;
+  isCanceled?: boolean;
+} | null> {
+  try {
+    const now = new Date().toISOString();
+    const result = await sanity.fetch<{
+      _id: string;
+      title: string;
+      startDateTime: string;
+      location: string;
+      description?: string;
+      isCanceled?: boolean;
+    } | null>(`
+      *[_type == "service" && startDateTime >= "${now}" && !isCanceled] | order(startDateTime asc) [0] {
+        _id,
+        title,
+        startDateTime,
+        location,
+        description,
+        isCanceled
+      }
+    `)
+    return result ?? null
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('401')) {
+      console.error('Sanity authentication failed. Please check your SANITY_READ_TOKEN environment variable.')
+      console.error('To create a Viewer token, see: docs/HANDOFF.md')
+    }
+    throw error
+  }
+}
+
 export async function getSiteSettings(): Promise<{
   publicName?: string;
   canonicalName?: string;
