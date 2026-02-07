@@ -8,10 +8,37 @@ const sanity = createClient({
   token: import.meta.env.SANITY_READ_TOKEN,
 })
 
-export async function getSiteSettings(): Promise<{publicName?: string} | null> {
+export async function getSiteSettings(): Promise<{
+  publicName?: string;
+  canonicalName?: string;
+  domainPolicyText?: string;
+  locations?: Array<{
+    name: string;
+    address: string;
+    mapLink: string;
+    phone?: string;
+    email?: string;
+  }>;
+} | null> {
   try {
-    const result = await sanity.fetch<{publicName?: string} | null>(`
-      *[_type == "siteSettings"][0]{ publicName }
+    const result = await sanity.fetch<{
+      publicName?: string;
+      canonicalName?: string;
+      domainPolicyText?: string;
+      locations?: Array<{
+        name: string;
+        address: string;
+        mapLink: string;
+        phone?: string;
+        email?: string;
+      }>;
+    } | null>(`
+      *[_type == "siteSettings"][0]{ 
+        publicName,
+        canonicalName,
+        domainPolicyText,
+        locations
+      }
     `)
     return result ?? null
   } catch (error) {
