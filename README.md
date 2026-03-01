@@ -1,15 +1,42 @@
 # Dr. Nicolás Capdevilla - Website Profesional
 
-Sitio web profesional, moderno y accesible para el Dr. Nicolás Capdevilla — especialista en medicina integrativa y manejo del dolor.
+Sitio web profesional, moderno y accesible para el Dr. Nicolás Capdevilla — especialista en medicina integrativa y manejo del dolor en Rosario, Argentina.
 
-## 🎨 Características del Diseño
+## � Sitio Online
+**URL**: https://pauneren.github.io/dr-capdevila/
+
+## � Características del Diseño
 
 - **Paleta de colores**: Azul #0A76FF (principal), naranja #FF6A00 (CTA), blanco y grises
 - **Tipografía**: Inter (sans-serif elegante y moderna)
 - **Diseño responsive**: Mobile-first, adaptable a tablet y desktop
 - **Accesibilidad**: WCAG AA, navegación por teclado, contraste adecuado
 - **Microinteracciones**: Hover effects, transiciones suaves, animaciones on-scroll
-- **SEO optimizado**: Meta tags, JSON-LD Schema, estructura semántica
+- **SEO optimizado**: Meta tags, JSON-LD Schema, estructura semántica, optimización local
+
+## 🔍 Optimización SEO en Español
+
+### SEO Local Argentina
+- **Ubicación**: Rosario, Santa Fe, Argentina
+- **Atención**: Presencial y online (telemedicina)
+- **Geolocalización**: Coordenadas de Rosario incluidas
+- **Schema.org**: Datos estructurados para médicos en español
+- **Keywords**: Medicina integrativa, manejo del dolor, Rosario, Argentina, consultas online, telemedicina, médico especialista
+
+### Meta Tags en Español
+- **Title**: "Dr. Nicolás Capdevilla - Medicina Integrativa | Manejo del Dolor en Rosario, Argentina"
+- **Description**: Incluye ubicación y servicios con lenguaje formal argentino
+- **Open Graph**: Optimizado para redes sociales en español
+- **Twitter Cards**: Optimizado para Twitter en español
+- **Canonical URL**: Evita contenido duplicado
+- **Locale**: es_AR (Español Argentina)
+
+### Contenido Estructurado en Español
+- **JSON-LD Schema**: Médico con especialidades en español
+- **Datos de contacto**: Teléfono y dirección local
+- **Horarios de atención**: Especificados en Schema
+- **Servicios**: Consultas presenciales y online
+- **Lenguaje**: Formal argentino, terminología médica apropiada
 
 ## 📁 Estructura del Proyecto
 
