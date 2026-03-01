@@ -1,0 +1,156 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Temporary folders
+tmp/
+temp/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Image optimization caches
+.squoosh/
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+.tmp/
+.temp/
+
+# Editor backup files
+*.bak
+*.backup
+
+# Package manager lock files (keep one, remove others based on your preference)
+# package-lock.json  # npm
+# yarn.lock         # yarn
+# pnpm-lock.yaml    # pnpm
+
+# Local configuration files
+config.local.js
+config.local.json
+
+# Database files
+*.sqlite
+*.db
+
+# API keys and secrets
+secrets.json
+api-keys.json
+
+# Font files (if they're large and not needed in repo)
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Large media files (consider using Git LFS for these)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.flac
+*.aac
+
+# Compressed files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tgz
+
+# Local development files
+local/
+dev/
