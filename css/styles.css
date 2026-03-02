@@ -1465,7 +1465,8 @@ p {
 .contact-item {
   display: flex;
   gap: var(--spacing-4);
-  align-items: start;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
 }
 
 .contact-item__icon {
@@ -1476,14 +1477,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
-  margin-right: var(--spacing-4);
+  flex-shrink: 0;
   transition: all var(--transition-normal);
 }
 
 .contact-item:hover .contact-item__icon {
   transform: scale(1.1);
-  box-shadow: var(--shadow-xl);
 }
 
 .contact-item__icon svg {
@@ -1495,12 +1494,14 @@ p {
   color: var(--color-primary);
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-2);
+  line-height: 1.3;
 }
 
 .contact-item__content a,
 .contact-item__content p {
   color: var(--color-gray-600);
-  line-height: 1.6;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .contact-item__content a:hover {
