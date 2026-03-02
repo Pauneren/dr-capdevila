@@ -7,23 +7,26 @@ type Project = {
   tags: string[];
   href?: string;
   repoHref?: string;
+  image: string;
 };
 
 const Projects = () => {
   const projects: Project[] = [
     {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive personal website with dark mode and smooth navigation.',
-      tags: ['React', 'TypeScript', 'Tailwind CSS'],
-      href: '#',
+      title: 'Psychologist Personal Website',
+      description: 'A professional personal website for a psychologist featuring appointment booking, service information, and a calming design aesthetic.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UX/UI', 'GitHub', 'SEO', 'Performance'],
+      href: 'https://pauneren.github.io/psicolog-website/',
       repoHref: '#',
+      image: '/images/projects/psicologist-website-project.png',
     },
     {
       title: 'Product Landing Page',
       description: 'A high-converting landing page with clean typography and motion-driven UI.',
-      tags: ['UI/UX', 'Responsive', 'Performance'],
-      href: '#',
+      tags: ['UI/UX', 'Responsive', 'Performance', 'JavaScript ES6+', 'GitHub', 'SEO', 'Geolocalización'],
+      href: 'https://pauneren.github.io/dr-capdevila/',
       repoHref: '#',
+      image: '/images/projects/projecto2-dr-capdevila.png',
     },
     {
       title: 'Full-Stack App',
@@ -31,6 +34,7 @@ const Projects = () => {
       tags: ['Node.js', 'PostgreSQL', 'API'],
       href: '#',
       repoHref: '#',
+      image: '/images/projects/fullstack-app.jpg',
     },
   ];
 
@@ -51,6 +55,18 @@ const Projects = () => {
               key={project.title}
               className="group bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-shadow duration-200 overflow-hidden"
             >
+              <div className="h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = `<div class="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm">Project Image</div>`;
+                  }}
+                />
+              </div>
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
