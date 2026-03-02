@@ -577,7 +577,7 @@ p {
   font-weight: var(--font-weight-normal);
   opacity: 0;
   transform: translateY(30px);
-  animation: slideInUp 1s 0.2s var(--transition-bounce) forwards;
+  animation: slideInUp 1s 0.4s ease-out forwards;
 }
 
 .hero__logo {
