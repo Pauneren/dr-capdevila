@@ -1706,6 +1706,14 @@ p {
   }
 }
 
+.contact-subtitle {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-8);
+  font-weight: var(--font-weight-medium);
+}
+
 .contact__map {
   margin-top: var(--spacing-8);
 }
